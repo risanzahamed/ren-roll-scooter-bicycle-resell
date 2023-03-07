@@ -17,8 +17,8 @@ const Home = () => {
                 <div class="px-4 mx-auto lg:max-w-[1400px] sm:px-6 lg:px-8">
                     <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                         <div>
-                            <h1 class="mt-4 text-4xl font-semibold text-black lg:leading-loose lg:mt-8 sm:text-6xl xl:text-5xl">Ride Green with Rent Roll Kick Scooter and BiCycle </h1>
-                            <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">Rent Roll offers sustainable transportation options with our kick scooters and bicycles for resell. Our products are high-quality and designed for riders of all levels. Join us in our mission to ride green and reduce carbon emissions.</p>
+                            <h1 class="mt-4 text-4xl font-semibold text-black lg:leading-loose lg:mt-8 sm:text-6xl xl:text-5xl">Ride Green with Ren Roll Kick Scooter and BiCycle </h1>
+                            <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">Ren Roll offers sustainable transportation options with our kick scooters and bicycles for resell. Our products are high-quality and designed for riders of all levels. Join us in our mission to ride green and reduce carbon emissions.</p>
 
                             <a href="#" title="" class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-8 hover:bg-yellow-400 focus:bg-yellow-400" role="button">
                                 See Category
