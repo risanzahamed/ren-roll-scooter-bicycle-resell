@@ -1,0 +1,46 @@
+[
+    {
+        "category_id": "1",
+        "categoryName": "Kick Scooter",
+        "model": "Electric Scooter",
+        "image": "https://hugge.qodeinteractive.com/wp-content/uploads/2021/01/single_big1.jpg",
+        "location": "Chottogram",
+        "originalPrice": "$1500.00",
+        "resalePrice": "$1350.00",
+        "yearsOfUse": "1 months, 15 days",
+        "description": "Looking for a convenient and eco-friendly mode of transportation? Look no further than our electric scooter! Our scooter is designed with your comfort and convenience in mind, offering a smooth and effortless ride that will make getting around town a breeze. With its powerful electric motor, you can easily reach speeds of up to 20 mph, while the lightweight and foldable design make it easy to carry and store when not in use. Plus, with zero emissions and low maintenance requirements, our electric scooter is the perfect choice for anyone looking to reduce their carbon footprint and save money on transportation costs. Don't wait any longer to experience the future of personal transportation - get your electric scooter today!"
+    },
+    {
+        "category_id": "2",
+        "categoryName": "Bicycle",
+        "model": "Dot Bike Euro Mountain Bike",
+        "image": "https://web.dotthemes.com/html/dotbike-preview/dotbike/img/single-product/3.jpg",
+        "location": "Chottogram",
+        "originalPrice": "$700.00",
+        "resalePrice": "$650.00",
+        "yearsOfUse": "1 months, 15 days",
+        "description": "Introducing the Dot Bike Euro Mountain Bike - the perfect ride for off-road adventurers and mountain trail enthusiasts! With its durable frame and advanced suspension system, you'll be able to conquer even the toughest terrain with ease. The Dot Bike Euro Mountain Bike also features high-quality components and responsive controls, ensuring a smooth and comfortable ride every time. And with its sleek and stylish design, you'll look just as good on the trails as you do off of them. Don't settle for a mediocre mountain bike - upgrade to the Dot Bike Euro Mountain Bike today and experience the ultimate ride for the ultimate adventurer!"
+    },
+    {
+        "category_id": "3",
+        "categoryName": "Accessories",
+        "model": "Small Granite Hat",
+        "image": "https://demo2.themelexus.com/ridez/wp-content/uploads/2021/12/product-17-1.jpg",
+        "location": "Chottogram",
+        "originalPrice": "$50.00",
+        "resalePrice": "$30.00",
+        "yearsOfUse": "1 months, 15 days",
+        "description": "Introducing the Small Granite Hat - the perfect accessory for those looking to add a touch of sophistication to their style! Made from high-quality materials, this hat is designed to last and withstand the elements. Its sleek and minimalist design ensures that it can be paired with any outfit, while its comfortable fit ensures that you can wear it all day long. Whether you're going for a casual look or a more formal one, the Small Granite Hat is the perfect finishing touch. Don't settle for an ordinary hat - upgrade to the Small Granite Hat today and take your style to the next level!"
+    },
+    {
+        "category_id": "3",
+        "categoryName": "Accessories",
+        "model": "MEC Metro cycling gloves unisex",
+        "image": "https://yokoo.themerex.net/wp-content/uploads/2019/09/prod07-copyright.jpg",
+        "location": "Dhaka, Mirpur - 2",
+        "originalPrice": "$500.00",
+        "resalePrice": "$350.00",
+        "yearsOfUse": "1 months, 15 days",
+        "description": "If you're looking to resell your MEC Metro cycling gloves, you've got a top-quality product that's sure to attract interest from cyclists of all levels. These unisex gloves are designed to provide maximum comfort and protection during long rides, with features like breathable mesh panels, padded palms, and adjustable cuffs for a snug fit. The Metro gloves are versatile enough to use in a variety of weather conditions, from warm summer days to cool fall evenings. With their sleek and modern design, these gloves are perfect for both recreational and serious cyclists who demand the best from their gear. So why wait? List your MEC Metro cycling gloves for sale today and let someone else enjoy the comfort and performance of these top-of-the-line gloves."
+    }
+]

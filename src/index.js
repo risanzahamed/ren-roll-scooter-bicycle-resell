@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './Redux/app/store';
+import { Toaster } from 'react-hot-toast';
+import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <Provider store={store}>
+        <Toaster />
+        <App />
+      </Provider>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
