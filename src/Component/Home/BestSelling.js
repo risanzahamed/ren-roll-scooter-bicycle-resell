@@ -18,7 +18,7 @@ const BestSelling = () => {
 
     console.log(bestSelling);
     return (
-        <div className='mx-auto p-14'>
+        <div className='mx-auto lg:p-14'>
             <h2 className='lg:text-7xl text-4xl text-center font-bold '>Most Viewed Product</h2>
 
             <div className='grid lg:grid-cols-3 gap-5 lg:w-[1400px] mx-auto mt-10'>
