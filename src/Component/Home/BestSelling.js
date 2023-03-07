@@ -9,7 +9,7 @@ const BestSelling = () => {
     const [flag, setFlag] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/best-selling')
+        fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/best-selling')
             .then(res => res.json())
             .then(data => {
                 setBestSelling(data)

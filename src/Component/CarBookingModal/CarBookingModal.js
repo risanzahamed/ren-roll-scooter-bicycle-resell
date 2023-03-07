@@ -31,7 +31,7 @@ const CarBookingModal = ({ productModel, setProductModel }) => {
 
 
 
-        fetch('http://localhost:5000/book-product', {
+        fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/book-product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

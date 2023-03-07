@@ -18,7 +18,7 @@ const Advertise = ({ advertise }) => {
         location
     }
 
-    fetch('http://localhost:5000/advertise', {
+    fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/advertise', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

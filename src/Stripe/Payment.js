@@ -16,18 +16,18 @@ const Payment = () => {
         return <Loading/>
     }
 
-    const { model, category } = data
+    // const { model, category } = data
     return (
         <div>
             <h2 className='text-4xl'>Payment</h2>
             <div className='mt-12'>
-                <h2 className='text-2xl '>Car Name : {category}</h2>
-                <h2 className='text-2xl mt-2'>Car Model : {model}</h2>
+                <h2 className='text-2xl '>Product Name : {data.category}</h2>
+                <h2 className='text-2xl mt-2'>User Email : {data.email}</h2>
 
                 <div>
                     < >
                        
-                        carDetails = {data}
+                        
                      
                     </>
                 </div>

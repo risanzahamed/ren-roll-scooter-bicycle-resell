@@ -44,7 +44,7 @@ const AddProduct = () => {
                     }
                    
 
-                    fetch('http://localhost:5000/add-product',{
+                    fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/add-product',{
                         method:'POST',
                         headers:{
                             'content-type' : 'application/json'

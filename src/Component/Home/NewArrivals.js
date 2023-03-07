@@ -9,7 +9,7 @@ const NewArrivals = () => {
     const [flag, setFlag] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/new-arivales')
+        fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/new-arivales')
             .then(res => res.json())
             .then(data => {
                 setNewArivales(data)

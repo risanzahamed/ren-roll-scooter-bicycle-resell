@@ -17,6 +17,7 @@ import ProductDashboardLayout from "../DashBoard/ProductDashboardLayout";
 import PrivateRoute from "../Routes/PrivateRouter";
 import Payment from "../Stripe/Payment";
 import Root from "./Root";
+import AllUser from "../DashBoard/AllUser";
 
 const router = createBrowserRouter([
 
@@ -51,7 +52,7 @@ const router = createBrowserRouter([
             {
                 path: "/category/:id",
                 element: <ProductByCategory/>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+                loader: ({ params }) => fetch(`https://ren-roll-scooter-bicycle-resell-server.vercel.app/category/${params.id}`)
             },
             {
                 path: "/products",
@@ -108,7 +109,12 @@ const router = createBrowserRouter([
             path: '/dashboard/user/seller',
             element: <AllSeller></AllSeller>,
             loader: ()=>fetch('https://used-car-website-server.vercel.app/user/seller')
-          }
+          },
+          {
+            path: '/dashboard/allusers',
+            element: <AllUser></AllUser>,
+            loader : () => fetch('http://localhost:5000/user')
+          },
         ]
       }
 ]);

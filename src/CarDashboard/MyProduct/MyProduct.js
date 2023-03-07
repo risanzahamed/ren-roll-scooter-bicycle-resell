@@ -12,7 +12,7 @@ const MyProduct = () => {
 
 
 
-    const url = `http://localhost:5000/add-product?email=${user?.email}`
+    const url = `https://ren-roll-scooter-bicycle-resell-server.vercel.app/add-product?email=${user?.email}`
 
     const { data: products = [], refetch } = useQuery({
         queryKey: ['add-product', user?.email],
