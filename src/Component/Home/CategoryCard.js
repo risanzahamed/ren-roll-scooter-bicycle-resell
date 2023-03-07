@@ -9,7 +9,7 @@ const CategoryCard = ({ productCategory }) => {
             <section class="mt-8  mx-auto ">
                 <Link to={`/category/${productCategory.categoryName}`}>
                     <div>
-                        <div class=" text-center ">
+                        <div class=" text-center hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:text-white transition ease-in-out delay-150 ">
                             <div className='border p-10 bg-white rounded-md  m-0 lg:m-0 '>
                                 <div class="relative flex align-middle items-center justify-center mx-auto">
                                     <img className='lg:w-[150px] lg:h-[150px] w-[100px] ' src={image} alt="" srcset="" />

@@ -14,10 +14,10 @@ const ProductCategory = () => {
     }, [])
     console.log(category);
     return (
-        <div className='mx-auto lg:mb-0 mb-10 lg:p-14'>
+        <div className='mx-auto lg:mb-0 mb-10 lg:p-14 '>
             <h2 className='lg:text-7xl text-4xl mb-8 text-center font-bold '>Discover our Product Category</h2>
 
-            <div className='grid lg:grid-cols-3 grid-cols-1 gap-5 mx-auto lg:max-w-[1500px]'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 gap-5 mx-auto lg:max-w-[1500px] '>
                 {
                     category.map(productCategory => <CategoryCard
                         key={productCategory._id}
