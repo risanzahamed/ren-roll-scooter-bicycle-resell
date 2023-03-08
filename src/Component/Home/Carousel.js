@@ -7,7 +7,7 @@ const Carousel = () => {
             <div className="container  mx-auto">
                 <div className='grid items-center lg:grid-cols-2 gap-16'>
 
-                    <div className='block p-4 lg:hidden'>
+                    <div data-aos="zoom-in-left" className='block p-4 lg:hidden'>
                         <div>
                             <div>
                                 <h1 class=" text-4xl font-semibold text-black  lg:mt-8 sm:text-6xl xl:text-5xl">Top Quality Bicycles for resell </h1>
@@ -18,7 +18,7 @@ const Carousel = () => {
 
                     <div className="flex items-center justify-center lg:w-[800px]   sm:py-8 lg:px-4">
                         {/* Carousel for desktop and large size devices */}
-                        <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={3} visibleSlides={2} step={1} infinite={true}>
+                        <CarouselProvider data-aos="zoom-out-up" className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={3} visibleSlides={2} step={1} infinite={true}>
                             <div className="w-full relative flex items-center justify-center">
                                 <ButtonBack role="button" aria-label="slide backward" className="absolute z-30 left-0 ml-8  cursor-pointer" id="prev">
                                     <svg width={58} height={40} viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@ const Carousel = () => {
                                     </svg>
                                 </ButtonBack>
                                 <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                    <Slider data-aos="flip-up">
+                                    <Slider >
                                         <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                             <Slide index={0}>
                                                 <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -81,7 +81,7 @@ const Carousel = () => {
                                     </svg>
                                 </ButtonBack>
                                 <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                    <Slider data-aos="flip-up">
+                                    <Slider data-aos="zoom-out-up">
                                         <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                             <Slide index={0}>
                                                 <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -136,7 +136,7 @@ const Carousel = () => {
                                     </svg>
                                 </ButtonBack>
                                 <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                    <Slider data-aos="flip-up">
+                                    <Slider data-aos="zoom-out-up">
                                         <div id="slider" className="h-full w-full flex lg:gap-8 md:gap-6 items-center justify-start transition ease-out duration-700">
                                             <Slide index={0}>
                                                 <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -183,7 +183,7 @@ const Carousel = () => {
                         </CarouselProvider>
                     </div>
 
-                    <div className='lg:block hidden'>
+                    <div data-aos="zoom-in-left" className='lg:block hidden'>
                         <div>
                             <h1 class="mt-4 text-4xl font-semibold text-black  lg:mt-8 sm:text-6xl xl:text-5xl">Top Quality Bicycles for resell </h1>
                             <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">When looking for top-quality bicycles, consider reputable brands like Trek, Giant, Specialized, Cannondale, and Scott. These companies are known for their innovative designs, durable materials, and exceptional performance.</p>

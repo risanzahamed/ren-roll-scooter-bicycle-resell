@@ -6,15 +6,14 @@ const FlagedItemData = () => {
     const [flaged , setFlaged] = useState([])
 
     useEffect(()=>{
-        fetch('https://used-car-website-server.vercel.app/flag-items')
+        fetch('http://localhost:5000/flag-items')
         .then(res => res.json())
         .then(data =>{
             setFlaged(data)
         })
     },[])
 
-
-
+    console.log(flaged);
     return (
         <div>
             <h1 className='text-4xl'>Flaged Items</h1>

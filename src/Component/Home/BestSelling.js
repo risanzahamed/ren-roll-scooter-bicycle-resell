@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CarBookingModal from '../CarBookingModal/CarBookingModal';
+import ProModal from '../Modal/ProModal';
 import BestSellingCard from './BestSellingCard';
 
 const BestSelling = () => {
@@ -16,7 +17,7 @@ const BestSelling = () => {
             })
     }, [])
 
-    console.log(bestSelling);
+
     return (
         <div className='mx-auto lg:p-14'>
             <h2 className='lg:text-7xl text-4xl text-center font-bold '>Most Viewed Product</h2>
@@ -33,10 +34,12 @@ const BestSelling = () => {
                 }
             </div>
 
-            <CarBookingModal
+            <ProModal
             productModel={productModel}
             setProductModel={setProductModel}
-            ></CarBookingModal>
+            ></ProModal>
+
+
         </div>
     );
 };

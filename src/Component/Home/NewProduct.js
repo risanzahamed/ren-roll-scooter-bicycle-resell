@@ -6,7 +6,7 @@ const NewProduct = ({ newProduct, setProductModel, setFlag }) => {
     const { isLoading, user: { role } } = useSelector(state => state.auth)
     return (
         <div>
-            <div className='bg-white'>
+            <div data-aos="zoom-in" data-aos-duration="400" className='bg-white'>
 
                 <a href="#" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
                     <img

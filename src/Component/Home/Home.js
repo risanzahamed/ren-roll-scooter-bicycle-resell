@@ -6,18 +6,19 @@ import NewArrivals from './NewArrivals';
 import ProductCategory from './ProductCategory';
 import CoreScooterFeature from './CoreScooterFeature';
 import WebsiteFeature from './WebsiteFeature';
-import BestSelling from './BestSelling';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import OurGallary from '../OurGallary/OurGallary';
+
 
 const Home = () => {
     return (
         <div class="bg-white mx-auto">
-
-
             <section class="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24">
                 <div class="px-4 mx-auto lg:max-w-[1400px] sm:px-6 lg:px-8">
                     <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
-                        <div>
-                            <h1 class="mt-4 text-4xl font-semibold text-black lg:leading-loose lg:mt-8 sm:text-6xl xl:text-5xl">Ride Green with Ren Roll Kick Scooter and BiCycle </h1>
+                        <div data-aos="zoom-out-up">
+                            <h1  class="mt-4 text-4xl font-semibold text-black lg:leading-loose lg:mt-8 sm:text-6xl xl:text-5xl">Ride Green with Ren Roll Kick Scooter and BiCycle </h1>
                             <p class="mt-4 text-base text-black lg:mt-8 sm:text-xl">Ren Roll offers sustainable transportation options with our kick scooters and bicycles for resell. Our products are high-quality and designed for riders of all levels. Join us in our mission to ride green and reduce carbon emissions.</p>
 
                             <a href="#" title="" class="inline-flex items-center px-6 py-4 mt-8 font-semibold text-black transition-all duration-200 bg-yellow-300 rounded-full lg:mt-8 hover:bg-yellow-400 focus:bg-yellow-400" role="button">
@@ -28,7 +29,7 @@ const Home = () => {
                             </a>
                         </div>
 
-                        <div className=''>
+                        <div data-aos="fade-left">
                             <div className="flex items-center justify-center lg:w-[800px]  sm:py-8 ">
                                 {/* Carousel for desktop and large size devices */}
                                 <CarouselProvider className="lg:block hidden" naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={4} visibleSlides={2} step={1} infinite={true}>
@@ -39,7 +40,7 @@ const Home = () => {
                                             </svg>
                                         </ButtonBack>
                                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                            <Slider data-aos="flip-up">
+                                            <Slider >
                                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                                     <Slide index={0}>
                                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -105,7 +106,7 @@ const Home = () => {
                                             </svg>
                                         </ButtonBack>
                                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                            <Slider data-aos="flip-up">
+                                            <Slider >
                                                 <div id="slider" className="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                                                     <Slide index={0}>
                                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -171,7 +172,7 @@ const Home = () => {
                                             </svg>
                                         </ButtonBack>
                                         <div className="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
-                                            <Slider data-aos="flip-up">
+                                            <Slider >
                                                 <div id="slider" className="h-full w-full flex lg:gap-8 md:gap-6 items-center justify-start transition ease-out duration-700">
                                                     <Slide index={0}>
                                                         <div className="flex flex-shrink-0 relative w-full sm:w-auto">
@@ -245,8 +246,9 @@ const Home = () => {
 
             <WebsiteFeature/>
 
-            <BestSelling/>
-            
+            <OurGallary/>
+
+
         </div>
 
 

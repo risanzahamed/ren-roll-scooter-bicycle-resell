@@ -18,7 +18,7 @@ const FlagIteams = ({flag}) => {
         location
     }
 
-    fetch('https://used-car-website-server.vercel.app/flag-items', {
+    fetch('http://localhost:5000/flag-items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -28,7 +28,7 @@ const FlagIteams = ({flag}) => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    toast.success('Car Flaged Successfull')
+                    toast.success('product Flaged Successfull')
                     console.log('inside post',data);
                     return true
                 }

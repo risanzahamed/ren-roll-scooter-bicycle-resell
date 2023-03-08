@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import CarBookingModal from '../CarBookingModal/CarBookingModal';
-import NewProduct from './NewProduct';
+import NewProduct from '../Home/NewProduct';
 
-const NewArrivals = () => {
+const OurTopProduct = () => {
 
-    const [newArivales, setNewArivales] = useState([])
-    const [productModel, setProductModel] = useState({})
+   const [product, setProduct] = useState([])
+   const [productModel, setProductModel] = useState({})
     const [flag, setFlag] = useState(false)
 
-    useEffect(() => {
-        fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/new-arivales')
-            .then(res => res.json())
-            .then(data => {
-                setNewArivales(data)
-            })
-    }, [])
-
-
-
+   useEffect(()=>{
+    fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/best-selling')
+    .then(res => res.json())
+    .then(data => {
+        setProduct(data)
+    })
+   }, [])
+ 
     return (
         <div className='mx-auto mb-10 lg:mb-0 lg:p-14'>
-            <h2 className='lg:text-7xl text-4xl text-center font-bold ' data-aos="zoom-in" data-aos-duration="400">Discover our new arrivals</h2>
+            <h2 className='lg:text-7xl text-4xl text-center font-bold ' data-aos="zoom-in" data-aos-duration="400">Discover Our Top Product</h2>
 
             <div className='grid lg:grid-cols-3 gap-5 lg:w-[1400px] mx-auto mt-10'>
                 {
-                    newArivales.map(newProduct =>
+                    product.map(newProduct =>
                         <NewProduct
                             newProduct={newProduct}
                             setProductModel={setProductModel}
@@ -33,12 +32,12 @@ const NewArrivals = () => {
                 }
             </div>
 
-            <CarBookingModal
+            {/* <ProModal
             productModel={productModel}
             setProductModel={setProductModel}
-            ></CarBookingModal>
+            ></ProModal> */}
         </div>
     );
 };
 
-export default NewArrivals;
+export default OurTopProduct;

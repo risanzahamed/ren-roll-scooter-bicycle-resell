@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import CarBookingModal from '../CarBookingModal/CarBookingModal';
 
 const Product = () => {
     const [productModel, setProductModel] = useState({})
     const [flag, setFlag] = useState(false)
     const [product, setProduct] = useState([])
+    const { isLoading, user: { role } } = useSelector(state => state.auth)
 
     useEffect(() => {
         fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/products')
@@ -18,12 +20,12 @@ const Product = () => {
 
     return (
         <div className='mx-auto lg:mb-0 lg:mt-0 mt-10 mb-10 lg:p-14'>
-            <h2 className='lg:text-7xl text-4xl mb-10 text-center font-bold '>Our All Products</h2>
+            <h2 data-aos="zoom-in" data-aos-duration="400" className='lg:text-7xl text-4xl mb-10 text-center font-bold '>Our All Products</h2>
 
             <div className='grid lg:grid-cols-3 gap-5 lg:w-[1400px] mx-auto mt-10'>
                 {
                     product.map(product =>
-                        <div className='bg-white'>
+                        <div data-aos="zoom-in" data-aos-duration="400" className='bg-white'>
 
                             <a href="#" class="block rounded-lg p-4 shadow-sm shadow-indigo-100">
                                 <img
@@ -67,6 +69,13 @@ const Product = () => {
                                     htmlFor="product-modal"
                                     className="btn btn-primary mt-5"
                                 >Buy Now</label>
+
+                                {
+                                    role === "customer" && <button
+                                        className='btn btn-secondary ml-5'
+                                        onClick={() => setFlag([product])}
+                                    >Report To Admin</button>
+                                }
 
                             </a>
 

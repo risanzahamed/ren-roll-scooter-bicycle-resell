@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 
 const BestSellingCard = ({ productBest, setProductModel, setFlag }) => {
 
-    console.log(productBest.image);
 
     const { isLoading, user: { role } } = useSelector(state => state.auth)
     return (
