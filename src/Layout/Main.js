@@ -93,7 +93,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/payment/:id',
         element: <Payment></Payment>,
-        loader: ({ params }) => fetch(`https://ren-roll-scooter-bicycle-resell-server.vercel.app/booking/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`)
       },
       {
         path: '/dashboard/add-product',
@@ -106,17 +106,17 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/user/customer',
         element: <AllCustomer></AllCustomer>,
-        loader: () => fetch('https://used-car-website-server.vercel.app/user/customer')
+        loader: () => fetch('')
       },
       {
         path: '/dashboard/user/seller',
         element: <AllSeller></AllSeller>,
-        loader: () => fetch('https://used-car-website-server.vercel.app/user/seller')
+        loader: () => fetch('')
       },
       {
         path: '/dashboard/allusers',
         element: <AllUser></AllUser>,
-        loader: () => fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/user')
+        loader: () => fetch('http://localhost:5000/user')
       },
       {
         path:'/dashboard/flags',

@@ -12,7 +12,7 @@ const CheckoutForm = ({ productDetails }) => {
     const [transectionId, setTransectionId] = useState('');
     const [proccessing, setProccessing] = useState(false);
 
-    const { price } = productDetails
+    const { price, buyerName, phone, email, _id } = productDetails
 
 
     const [clientSecret, setClientSecret] = useState("");
@@ -59,55 +59,53 @@ const CheckoutForm = ({ productDetails }) => {
         }
         setSuccess('')
         setProccessing(true)
-    //     const { paymentIntent, error: confirmedError } = await stripe.confirmCardPayment(
-    //         clientSecret,
-    //         {
-    //             payment_method: {
-    //                 card: card,
-    //                 billing_details: {
-    //                     name: buyerName,
-    //                     email: email,
-    //                     phone: phone
-    //                 },
-    //             },
-    //         },
-    //     );
-    //     if (confirmedError) {
-    //         setErrorMessage(confirmedError.message)
-    //         return
-    //     }
+        const { paymentIntent, error: confirmedError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: buyerName,
+                        email: email,
+                        phone: phone
+                    },
+                },
+            },
+        );
+        if (confirmedError) {
+            setErrorMessage(confirmedError.message)
+            return
+        }
 
-    //     if (paymentIntent.status === "succeeded") {
+        if (paymentIntent.status === "succeeded") {
 
 
-    //         const payment = {
-    //             price,
-    //             transectionId: paymentIntent.id,
-    //             email,
-    //             bookingId: _id
+            const payment = {
+                price,
+                transectionId: paymentIntent.id,
+                email,
+                bookingId: _id
 
-    //         }
+            }
 
-    //         fetch('https://used-car-website-server.vercel.app/payment', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'content-type': 'application/json',
-    //                 authorization: `bearer ${localStorage.getItem('accessToken')}`
-    //             },
-    //             body: JSON.stringify(payment)
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 console.log(data);
-    //                 if (data.insertedId) {
-    //                     setSuccess('congrats! your payment is successfull')
-    //                     setTransectionId(paymentIntent.id)
-    //                 }
-    //             })
-
-    //     }
-    //     console.log('paymetIntent', paymentIntent);
-    //     setProccessing(false)
+            fetch('http://localhost:5000/payment', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(payment)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.insertedId) {
+                        setSuccess('congrats! your payment is successfull')
+                        setTransectionId(paymentIntent.id)
+                    }
+                })
+        }
+        console.log('paymetIntent', paymentIntent);
+        setProccessing(false)
 
 
     };
@@ -136,13 +134,13 @@ const CheckoutForm = ({ productDetails }) => {
                     Pay
                 </button>
             </form>
-            {/* <h1 className='mt-4 text-red-600 font-semibold'>{errorMessage}</h1>
+            <h1 className='mt-4 text-red-600 font-semibold'>{errorMessage}</h1>
             {
                 success && <div>
                     <h2 className='bg-green-500'>{success}</h2>
                     <h2 className='bg-green-500'>Your TransectionId :{transectionId}</h2>
                 </div>
-            } */}
+            }
         </div>
     );
 };
