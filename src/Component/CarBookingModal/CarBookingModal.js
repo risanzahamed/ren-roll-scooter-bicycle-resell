@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 
 const CarBookingModal = ({ productModel, setProductModel }) => {
-    const { model, categoryName,category, resalePrice, image, location } = productModel
+    const { model, categoryName,category, resalePrice, image, location, description } = productModel
 
-    const { isLoading, user } = useSelector(state => state.auth)
+    const { isLoading, user  } = useSelector(state => state.auth)
 
     const handleCarBooking = (event) => {
         event.preventDefault()
@@ -55,12 +56,17 @@ const CarBookingModal = ({ productModel, setProductModel }) => {
     return (
         <div>
             <input type="checkbox" id="product-modal" className="modal-toggle" />
-            <div className="modal">
+            <div className="modal ">
                 <div className="modal-box relative">
                     <label htmlFor="product-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <form onSubmit={handleCarBooking} className="flex flex-col w-96 mx-auto mt-4 mb-4 rounded  dark:text-gray-100 ng-untouched ng-pristine ng-valid">
 
-                        <img src={image} alt="" srcSet="" />
+                        <img className='h-80 w-full rounded-md object-cover' src={image} alt="" srcSet="" />
+
+
+                        <h1 className='readOnly mt-5 mb-5'>Description : {description}</h1>
+
+                       
 
                         <input name='category' id="category" type="text" defaultValue={categoryName || category} readOnly placeholder='Full Name' className="flex items-center h-12 px-4 mt-2 rounded focus:outline-none focus:ring-2 dark:text-gray-900 focus:dark:border-violet-400 focus:ring-violet-400 border input-bordered" />
 
@@ -79,9 +85,15 @@ const CarBookingModal = ({ productModel, setProductModel }) => {
 
                         <input id="phone" name='phone' type="tel" placeholder='Phone Numbers' className="flex items-center h-12 px-4 mt-2 rounded focus:outline-none focus:ring-2 dark:text-gray-900 focus:dark:border-violet-400 focus:ring-violet-400 border input-bordered" />
 
+                        {
+                            user?.email && user?.role ? <input  htmlFor="product-modal"  className="flex items-center justify-center h-12 px-6 mt-8 text-sm font-semibold rounded dark:bg-violet-400 btn bg-orange-700 text-white dark:text-gray-900" type="submit" value="Submit" /> :  <Link to='/choose-profile'>
+                            <button className='btn btn-primary text-xs align-middle text-center mt-5'>
+                                Please Login or create your seller account to buy a product</button>
+                            </Link>
+                        }
 
 
-                        <input  htmlFor="product-modal"  className="flex items-center justify-center h-12 px-6 mt-8 text-sm font-semibold rounded dark:bg-violet-400 btn bg-orange-700 text-white dark:text-gray-900" type="submit" value="Submit" />
+                        
 
                     </form>
 

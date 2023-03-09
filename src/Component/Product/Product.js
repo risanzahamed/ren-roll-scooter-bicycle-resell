@@ -48,7 +48,17 @@ const Product = () => {
                                             </div>
                                         </div>
 
-                                        <div>
+                                        <div class=" flex justify-between ">
+
+                                            <div class=" sm:mt-0">
+                                                <p class="text-gray-500 text-sm">Category : <span className='font-medium'>{product.categoryName}</span> </p>
+                                            </div>
+                                            <div class=" sm:mt-0">
+                                                <p class="text-gray-500 text-sm">Location : <span className='font-medium'>{product.location}</span> </p>
+                                            </div>
+                                        </div>
+
+                                        <div className='mt-6'>
                                             <div>
                                                 <dt class="sr-only">Name</dt>
 
@@ -56,10 +66,10 @@ const Product = () => {
                                             </div>
                                         </div>
 
-                                        <div class="mt-6">
 
+                                        <div class="mt-6">
                                             <div class=" sm:mt-0">
-                                                <p class="text-gray-500 text-sm">Category : <span className='font-medium'>{product.categoryName}</span> </p>
+                                                <p class="text-gray-500 text-sm">Description : <span className='font-medium'>{product.description.slice(0, 150)}...</span> </p>
                                             </div>
                                         </div>
                                     </dl>
@@ -70,12 +80,12 @@ const Product = () => {
                                     className="btn btn-primary mt-5"
                                 >Buy Now</label>
 
-                                {
+                                {/* {
                                     role === "customer" && <button
                                         className='btn btn-secondary ml-5'
                                         onClick={() => setFlag([product])}
                                     >Report To Admin</button>
-                                }
+                                } */}
 
                             </a>
 

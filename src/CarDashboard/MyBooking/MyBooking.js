@@ -25,9 +25,9 @@ const MyBooking = () => {
 
             <div className='grid lg:grid-cols-2 gap-5 mt-5 grid-cols-1'>
             {
-                car && car.map(carbooked => <MyBookingCard
-                    key={carbooked._id}
-                    carbooked={carbooked}
+                car && car.map(productBooked => <MyBookingCard
+                    key={productBooked._id}
+                    productBooked={productBooked}
                     ></MyBookingCard>
                         
                    )

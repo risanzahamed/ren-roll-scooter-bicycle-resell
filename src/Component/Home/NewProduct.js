@@ -29,7 +29,17 @@ const NewProduct = ({ newProduct, setProductModel, setFlag }) => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div class=" flex justify-between ">
+
+                                <div class=" sm:mt-0">
+                                    <p class="text-gray-500 text-sm">Category : <span className='font-medium'>{newProduct.categoryName}</span> </p>
+                                </div>
+                                <div class=" sm:mt-0">
+                                    <p class="text-gray-500 text-sm">Location : <span className='font-medium'>{newProduct.location}</span> </p>
+                                </div>
+                            </div>
+
+                            <div className='mt-6'>
                                 <div>
                                     <dt class="sr-only">Name</dt>
 
@@ -37,10 +47,12 @@ const NewProduct = ({ newProduct, setProductModel, setFlag }) => {
                                 </div>
                             </div>
 
+                            
+
                             <div class="mt-6">
 
                                 <div class=" sm:mt-0">
-                                    <p class="text-gray-500 text-sm">Category : <span className='font-medium'>{newProduct.categoryName}</span> </p>
+                                    <p class="text-gray-500 text-sm">Description : <span className='font-medium'>{newProduct.description.slice(0, 150)}...</span> </p>
                                 </div>
                             </div>
                         </dl>
@@ -51,12 +63,12 @@ const NewProduct = ({ newProduct, setProductModel, setFlag }) => {
                         className="btn btn-primary mt-5"
                     >Buy Now</label>
 
-                    {
+                    {/* {
                         role === "customer" && <button
                             className='btn btn-secondary ml-5'
                             onClick={() => setFlag(newProduct)}
                         >Report To Admin</button>
-                    }
+                    } */}
                 </a>
 
 

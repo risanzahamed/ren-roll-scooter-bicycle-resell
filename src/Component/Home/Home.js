@@ -9,6 +9,7 @@ import WebsiteFeature from './WebsiteFeature';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import OurGallary from '../OurGallary/OurGallary';
+import OurTeam from './OurTeam';
 
 
 const Home = () => {
@@ -245,6 +246,8 @@ const Home = () => {
             <CoreScooterFeature/>
 
             <WebsiteFeature/>
+
+            <OurTeam/>
 
             <OurGallary/>
 

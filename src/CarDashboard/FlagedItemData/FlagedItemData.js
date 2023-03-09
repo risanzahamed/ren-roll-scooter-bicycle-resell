@@ -6,7 +6,7 @@ const FlagedItemData = () => {
     const [flaged , setFlaged] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/flag-items')
+        fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/flag-items')
         .then(res => res.json())
         .then(data =>{
             setFlaged(data)

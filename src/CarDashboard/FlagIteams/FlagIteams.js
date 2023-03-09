@@ -18,7 +18,7 @@ const FlagIteams = ({flag}) => {
         location
     }
 
-    fetch('http://localhost:5000/flag-items', {
+    fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/flag-items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

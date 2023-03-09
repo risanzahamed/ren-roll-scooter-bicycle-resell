@@ -10,10 +10,10 @@ import { createUser } from '../../Redux/features/authSlice';
 const Seller = () => {
 
     const dispatch = useDispatch()
-    const [postSeller, { isLoading, isError , role}] = useRegisterMutation()
-    const {user : {email}} = useSelector(state => state.auth)
+    const [postSeller, { isLoading, isError, role }] = useRegisterMutation()
+    const { user: { email } } = useSelector(state => state.auth)
     const { handleSubmit, register, reset, control } = useForm({
-        defaultValues :{
+        defaultValues: {
             email
         }
     });
@@ -22,14 +22,16 @@ const Seller = () => {
     const handleCreateSeller = (data) => {
         console.log(data);
         // dispatch(createUser({email : data.email, password : data.password}))
-        postSeller({...data, role : "seller"})
-      
-     }
+        postSeller({ ...data, role: "seller" })
 
-     useEffect(() => {
+        toast.success('Seller account created successfully')
+        navigate('/')
+
+    }
+
+    useEffect(() => {
         if (!isLoading && role) {
-            toast.success('Customer account created successfully')
-            navigate('/')
+           
         }
     }, [isLoading, role])
 
@@ -120,7 +122,7 @@ const Seller = () => {
                                         <label htmlFor="" className="text-base font-medium text-gray-900"> Email address </label>
                                         <div className="mt-2.5">
                                             <input
-                                           
+
                                                 type="email"
                                                 name="email"
                                                 {...register("email")}

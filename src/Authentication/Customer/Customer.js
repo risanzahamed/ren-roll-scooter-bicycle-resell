@@ -10,21 +10,23 @@ import { createUser } from '../../Redux/features/authSlice';
 const Customer = () => {
     const dispatch = useDispatch()
     const [postCustomer, { isLoading, isError, role }] = useRegisterMutation()
-    const {user : {email}} = useSelector(state => state.auth)
+    const { user: { email } } = useSelector(state => state.auth)
     const { handleSubmit, register, reset, control } = useForm({
-        defaultValues :{
+        defaultValues: {
             email
         }
     });
     const navigate = useNavigate()
-    
+
     const handleCreateCustomer = (data) => {
         console.log(data);
         //    dispatch(createUser({email : data.email, password : data.password}))
-        
+
         postCustomer({ ...data, role: "customer" })
+        toast.success('Customer account created successfully')
+        navigate('/')
     }
-   
+
     useEffect(() => {
         if (!isLoading && role) {
             toast.success('Customer account created successfully')
