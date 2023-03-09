@@ -88,7 +88,7 @@ const CheckoutForm = ({ productDetails }) => {
 
             }
 
-            fetch('http://localhost:5000/payment', {
+            fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -106,8 +106,6 @@ const CheckoutForm = ({ productDetails }) => {
         }
         console.log('paymetIntent', paymentIntent);
         setProccessing(false)
-
-
     };
 
     return (

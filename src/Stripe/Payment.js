@@ -7,7 +7,6 @@ import { Elements } from '@stripe/react-stripe-js';
 
 
 const stripePromise = loadStripe("pk_test_51MjjX9BnHYhj3RHAe4uLZZ6BUJq6TivrwfiCNxePnIN2Hcn6DixzqfFC2CJeby7Pt8mawYWSE7nW0xcQH0puCIUZ00aCg7hm9t");
-console.log(stripePromise);
 
 const Payment = () => {
 
@@ -20,7 +19,6 @@ const Payment = () => {
         return <Loading/>
     }
 
-
     return (
         <div>
             <h2 className='text-4xl'>Payment</h2>
@@ -30,7 +28,6 @@ const Payment = () => {
                 <h2 className='text-2xl '>Product Price: {data.price}</h2>
                 <h2 className='text-2xl '>Your Phone: {data.phone}</h2>
                 <h2 className='text-2xl'>Your Email : {data.email}</h2>
-
                 <div>
                     <Elements stripe={stripePromise}>
                         <CheckoutForm

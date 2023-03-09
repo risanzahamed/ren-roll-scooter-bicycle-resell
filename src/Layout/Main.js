@@ -93,7 +93,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/payment/:id',
         element: <Payment></Payment>,
-        loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`)
+        loader: ({ params }) => fetch(`https://ren-roll-scooter-bicycle-resell-server.vercel.app/book-product/${params.id}`)
       },
       {
         path: '/dashboard/add-product',
