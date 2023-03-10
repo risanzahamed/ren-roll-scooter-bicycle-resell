@@ -108,6 +108,7 @@ const CheckoutForm = ({ productDetails }) => {
                 })
         }
         console.log('paymetIntent', paymentIntent);
+        toast.success('congrats! your payment is successfull')
         setProccessing(false)
     };
 

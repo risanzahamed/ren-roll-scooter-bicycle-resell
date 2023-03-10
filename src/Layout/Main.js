@@ -20,7 +20,6 @@ import Root from "./Root";
 import AllUser from "../DashBoard/AllUser";
 import FlagIteams from "../CarDashboard/FlagIteams/FlagIteams";
 import FlagedItemData from "../CarDashboard/FlagedItemData/FlagedItemData";
-import OurTopProduct from "../Component/OurTopProduct/OurTopProduct";
 
 const router = createBrowserRouter([
 
@@ -78,18 +77,6 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <MyBooking />
       },
-      //   {
-      //     path:'/dashboard/flags',
-      //     element: <AdminRoute><FlagIteams/></AdminRoute>
-      //   },
-      //   {
-      //     path:'/dashboard/flaged',
-      //     element: <AdminRoute><FlagedItemData/></AdminRoute>,
-      //   },
-      //   {
-      //     path:'/dashboard/allusers',
-      //     element: <AdminRoute><AllUsers/></AdminRoute>,
-      //   },
       {
         path: '/dashboard/payment/:id',
         element: <Payment></Payment>,
@@ -116,7 +103,7 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/allusers',
         element: <AllUser></AllUser>,
-        loader: () => fetch('http://localhost:5000/user')
+        loader: () => fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/user')
       },
       {
         path:'/dashboard/flags',
