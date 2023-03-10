@@ -6,7 +6,7 @@ import CheckoutForm from './CheckoutForm';
 import { Elements } from '@stripe/react-stripe-js';
 
 
-const stripePromise = loadStripe("pk_test_51MjjX9BnHYhj3RHAe4uLZZ6BUJq6TivrwfiCNxePnIN2Hcn6DixzqfFC2CJeby7Pt8mawYWSE7nW0xcQH0puCIUZ00aCg7hm9t");
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const Payment = () => {
 

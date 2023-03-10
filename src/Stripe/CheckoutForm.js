@@ -13,13 +13,14 @@ const CheckoutForm = ({ productDetails }) => {
     const [proccessing, setProccessing] = useState(false);
 
     const { price, buyerName, phone, email, _id } = productDetails
+    console.log(price);
 
 
     const [clientSecret, setClientSecret] = useState("");
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("https://ren-roll-scooter-bicycle-resell-server.vercel.app/create-payment-intent", {
+        fetch("https://used-car-website-server.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
