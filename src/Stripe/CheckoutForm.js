@@ -90,7 +90,7 @@ const CheckoutForm = ({ productDetails }) => {
 
             }
 
-            fetch('https://used-car-website-server.vercel.app/payment', {
+            fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
