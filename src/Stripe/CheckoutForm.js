@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
+import { toast } from 'react-hot-toast';
 
 
 const CheckoutForm = ({ productDetails }) => {
@@ -89,7 +90,7 @@ const CheckoutForm = ({ productDetails }) => {
 
             }
 
-            fetch('https://ren-roll-scooter-bicycle-resell-server.vercel.app/payment', {
+            fetch('https://used-car-website-server.vercel.app/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -100,7 +101,8 @@ const CheckoutForm = ({ productDetails }) => {
                 .then(data => {
                     console.log(data);
                     if (data.insertedId) {
-                        setSuccess('congrats! your payment is successfull')
+                        
+                        toast.success('congrats! your payment is successfull')
                         setTransectionId(paymentIntent.id)
                     }
                 })

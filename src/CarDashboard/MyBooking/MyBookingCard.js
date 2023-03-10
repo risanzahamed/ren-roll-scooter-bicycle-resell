@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
     
 const MyBookingCard = ({productBooked}) => {
 
-    const {image, phone, email, category,price, model, location} = productBooked
+    const {image, phone, email, category,price, model, location, paid} = productBooked
+    console.log(paid);
     return (
         <div>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
