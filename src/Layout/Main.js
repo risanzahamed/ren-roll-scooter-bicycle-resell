@@ -5,9 +5,6 @@ import Customer from "../Authentication/Customer/Customer";
 import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
 import Seller from "../Authentication/Seller/Seller";
-import AddProduct from "../CarDashboard/AddProduct/AddProduct";
-import MyProduct from "../CarDashboard/MyProduct/MyProduct";
-import MyBooking from "../CarDashboard/MyBooking/MyBooking";
 import Home from "../Component/Home/Home";
 import ProductByCategory from "../Component/Home/ProductByCategory";
 import Product from "../Component/Product/Product";
@@ -18,8 +15,11 @@ import PrivateRoute from "../Routes/PrivateRouter";
 import Payment from "../Stripe/Payment";
 import Root from "./Root";
 import AllUser from "../DashBoard/AllUser";
-import FlagIteams from "../CarDashboard/FlagIteams/FlagIteams";
-import FlagedItemData from "../CarDashboard/FlagedItemData/FlagedItemData";
+import AddProduct from "../productDashboard/AddProduct/AddProduct";
+import MyBooking from "../productDashboard/MyBooking/MyBooking";
+import MyProduct from "../productDashboard/MyProduct/MyProduct";
+import FlagIteams from "../productDashboard/FlagIteams/FlagIteams"
+import FlagedItemData from "../productDashboard/FlagedItemData/FlagedItemData"
 
 const router = createBrowserRouter([
 

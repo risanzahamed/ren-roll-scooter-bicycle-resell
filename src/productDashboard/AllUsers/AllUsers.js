@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import toast from 'react-hot-toast';
-import CarDashboardLayout from '../../CarDashboardLayout/CarDashboardLayout';
+import productdashboardLayout from '../../productdashboardLayout/productdashboardLayout';
 
 const AllUsers = () => {
 

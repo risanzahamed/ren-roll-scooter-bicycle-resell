@@ -32,7 +32,7 @@ const Header = () => {
                             />
                         </Link>
 
-                        <label tabIndex={0} htmlFor="carDashboardDrawer" className="btn btn-primary lg:hidden">
+                        <label tabIndex={0} htmlFor="productdashboardDrawer" className="btn btn-primary lg:hidden">
                             Dashboard
                         </label>
 

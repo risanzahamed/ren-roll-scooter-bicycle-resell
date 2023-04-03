@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CarDashboardData = () => {
+const productdashboardData = () => {
     return (
         <div>
             <h2>
@@ -10,4 +10,4 @@ const CarDashboardData = () => {
     );
 };
 
-export default CarDashboardData;
+export default productdashboardData;

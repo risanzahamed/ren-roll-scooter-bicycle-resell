@@ -3,6 +3,7 @@ import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 const CheckoutForm = ({ productDetails }) => {
@@ -12,6 +13,8 @@ const CheckoutForm = ({ productDetails }) => {
     const [success, setSuccess] = useState('');
     const [transectionId, setTransectionId] = useState('');
     const [proccessing, setProccessing] = useState(false);
+
+    const navigate = useNavigate()
 
     const { price, buyerName, phone, email, _id } = productDetails
     console.log(price);
@@ -101,13 +104,15 @@ const CheckoutForm = ({ productDetails }) => {
                 .then(data => {
                     console.log(data);
                     if (data.insertedId) {
-                        
+                        navigate('/dashboard')
                         toast.success('congrats! your payment is successfull')
                         setTransectionId(paymentIntent.id)
+
                     }
                 })
         }
         console.log('paymetIntent', paymentIntent);
+        navigate('/dashboard')
         toast.success('congrats! your payment is successfull')
         setProccessing(false)
     };
