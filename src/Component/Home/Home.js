@@ -10,6 +10,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import OurGallary from '../OurGallary/OurGallary';
 import OurTeam from './OurTeam';
+import NumberSec from './NumberSec';
 
 
 const Home = () => {
@@ -250,6 +251,8 @@ const Home = () => {
             <OurTeam/>
 
             <OurGallary/>
+
+            <NumberSec/>
 
 
         </div>
